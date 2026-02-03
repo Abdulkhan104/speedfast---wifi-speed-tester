@@ -1,0 +1,23 @@
+:root { --primary: #00f2fe; --secondary: #4facfe; --bg: #0b0e14; --card-bg: #1a1f29; --text: #ffffff; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background: var(--bg); color: var(--text); display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow-x: hidden; }
+.container { width: 100%; max-width: 500px; padding: 2rem; background: rgba(255,255,255,0.02); border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+.logo { font-weight: 800; font-size: 1.2rem; letter-spacing: 2px; }
+.logo span { color: var(--primary); }
+.network-info { font-size: 0.8rem; color: #888; }
+.gauge-container { position: relative; width: 250px; height: 250px; margin: 0 auto 2rem; display: flex; align-items: center; justify-content: center; }
+.gauge-background { position: absolute; width: 100%; height: 100%; border: 15px solid #252a34; border-radius: 50%; }
+.gauge-fill { position: absolute; width: 100%; height: 100%; border: 15px solid var(--primary); border-radius: 50%; border-bottom-color: transparent; border-left-color: transparent; transform: rotate(-45deg); transition: transform 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+.speed-display { text-align: center; }
+.speed-display h1 { font-size: 4rem; line-height: 1; }
+.speed-display p { color: #888; text-transform: uppercase; letter-spacing: 2px; }
+.stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 2rem; }
+.stat-card { background: var(--card-bg); padding: 1.5rem; border-radius: 20px; text-align: center; transition: 0.3s; }
+.stat-card:hover { transform: translateY(-5px); background: #232a38; }
+.stat-card i { color: var(--primary); margin-bottom: 10px; display: block; }
+.stat-card span { font-size: 0.7rem; color: #888; text-transform: uppercase; }
+.stat-card h3 { font-size: 1.4rem; margin: 5px 0; }
+.main-btn { width: 100%; padding: 1.2rem; border-radius: 15px; border: none; background: linear-gradient(45deg, var(--secondary), var(--primary)); color: white; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: 0.3s; box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3); }
+.main-btn:active { transform: scale(0.98); }
+#chart-container { margin-top: 2rem; height: 100px; opacity: 0.6; }
