@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>SpeedPulse - Advanced Network Diagnostics</title>
+<link rel='stylesheet' href='style.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'>
+</head>
+<body>
+<div class='container'>
+<header>
+<div class='logo'>SPEED<span>PULSE</span></div>
+<div class='network-info' id='ip-address'>Detecting IP...</div>
+</header>
+<main>
+<div class='gauge-container'>
+<div class='gauge-background'></div>
+<div class='gauge-fill' id='gauge-fill'></div>
+<div class='speed-display'>
+<h1 id='speed-value'>0</h1>
+<p id='speed-unit'>Mbps</p>
+</div>
+</div>
+<div class='stats-grid'>
+<div class='stat-card'>
+<i class='fas fa-bolt'></i>
+<span>Ping</span>
+<h3 id='ping-val'>--</h3>
+<small>ms</small>
+</div>
+<div class='stat-card'>
+<i class='fas fa-arrow-down'></i>
+<span>Download</span>
+<h3 id='download-val'>--</h3>
+<small>Mbps</small>
+</div>
+<div class='stat-card'>
+<i class='fas fa-arrow-up'></i>
+<span>Upload</span>
+<h3 id='upload-val'>--</h3>
+<small>Mbps</small>
+</div>
+<div class='stat-card'>
+<i class='fas fa-wave-square'></i>
+<span>Jitter</span>
+<h3 id='jitter-val'>--</h3>
+<small>ms</small>
+</div>
+</div>
+<button id='start-btn' class='main-btn'>GO</button>
+</main>
+<div id='chart-container'>
+<canvas id='speedChart'></canvas>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+<script src='script.js'></script>
+</body>
+</html>
